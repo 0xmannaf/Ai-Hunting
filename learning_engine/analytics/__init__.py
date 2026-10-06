@@ -1,0 +1,1 @@
+"""Analytics package: pattern discovery over findings."""

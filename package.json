@@ -1,0 +1,16 @@
+{
+  "name": "hunting-new",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Security hunting workspace: Playwright browser automation for evidence capture and verification",
+  "type": "module",
+  "scripts": {
+    "browser:install": "playwright install chromium",
+    "capture": "node scripts/playwright_capture.js",
+    "test": "playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.49.0",
+    "playwright": "^1.49.0"
+  }
+}

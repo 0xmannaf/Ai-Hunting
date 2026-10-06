@@ -1,0 +1,21 @@
+{
+  "mcpServers": {
+    "chrome-devtools-mcp": {
+      "command": "npx",
+      "args": ["-y", "chrome-devtools-mcp@latest"],
+      "env": {
+        "CHROME_PATH": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+        "CHROME_DEBUGGING_PORT": "9222"
+      }
+    }
+  },
+  "browser": {
+    "headless": false,
+    "defaultViewport": { "width": 1440, "height": 900 },
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36"
+  },
+  "capture": {
+    "evidenceRoot": "testing",
+    "screenshotFormat": "png"
+  }
+}

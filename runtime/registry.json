@@ -1,0 +1,647 @@
+{
+  "version": "1.0.0",
+  "generated_at": "stamp-inserted-by-update",
+  "paths": {
+    "skills_source": "skills",
+    "skills_runtime": ".agents/skills",
+    "learning_engine": "learning_engine",
+    "memory": "memory",
+    "writeups": "writeups"
+  },
+  "skills": {
+    "recon": {
+      "name": "Reconnaissance",
+      "file": "skills/recon.md",
+      "phase": "recon",
+      "severity": "info",
+      "aliases": [
+        "recon",
+        "reconnaissance",
+        "enum",
+        "enumeration",
+        "asset-discovery"
+      ],
+      "tags": [
+        "recon",
+        "osint",
+        "assets"
+      ]
+    },
+    "subdomain-enumeration": {
+      "name": "Subdomain Enumeration",
+      "file": "skills/subdomain-enumeration.md",
+      "phase": "recon",
+      "severity": "info",
+      "aliases": [
+        "subdomains",
+        "subdomain-enum",
+        "dns-enum",
+        "dns-recon"
+      ],
+      "tags": [
+        "recon",
+        "dns",
+        "subdomains"
+      ]
+    },
+    "subdomain-takeover": {
+      "name": "Subdomain Takeover",
+      "file": "skills/subdomain-takeover.md",
+      "phase": "recon",
+      "severity": "high",
+      "aliases": [
+        "takeover",
+        "dangling-dns",
+        "dns-takeover"
+      ],
+      "tags": [
+        "recon",
+        "dns",
+        "takeover"
+      ]
+    },
+    "dorking": {
+      "name": "Google Dorking & OSINT",
+      "file": "skills/dorking.md",
+      "phase": "recon",
+      "severity": "info",
+      "aliases": [
+        "google-dorking",
+        "osint",
+        "search-dorking",
+        "googling"
+      ],
+      "tags": [
+        "recon",
+        "osint",
+        "search"
+      ]
+    },
+    "api-testing": {
+      "name": "API Testing",
+      "file": "skills/api-testing.md",
+      "phase": "exploit",
+      "severity": "high",
+      "aliases": [
+        "api",
+        "rest",
+        "rest-api",
+        "swagger",
+        "openapi",
+        "web-api"
+      ],
+      "tags": [
+        "api",
+        "web",
+        "json"
+      ]
+    },
+    "graphql": {
+      "name": "GraphQL Testing",
+      "file": "skills/graphql.md",
+      "phase": "exploit",
+      "severity": "high",
+      "aliases": [
+        "graphql",
+        "gql",
+        "graphql-api"
+      ],
+      "tags": [
+        "api",
+        "graphql"
+      ]
+    },
+    "xss": {
+      "name": "Cross-Site Scripting (XSS)",
+      "file": "skills/xss.md",
+      "phase": "exploit",
+      "severity": "high",
+      "aliases": [
+        "xss",
+        "cross-site-scripting",
+        "reflected-xss",
+        "stored-xss",
+        "dom-xss"
+      ],
+      "tags": [
+        "web",
+        "browser",
+        "client-side",
+        "javascript"
+      ]
+    },
+    "sqli": {
+      "name": "SQL Injection",
+      "file": "skills/sqli.md",
+      "phase": "exploit",
+      "severity": "critical",
+      "aliases": [
+        "sql-injection",
+        "sqli",
+        "sql"
+      ],
+      "tags": [
+        "web",
+        "injection",
+        "database"
+      ]
+    },
+    "ssrf": {
+      "name": "Server-Side Request Forgery",
+      "file": "skills/ssrf.md",
+      "phase": "exploit",
+      "severity": "critical",
+      "aliases": [
+        "ssrf",
+        "server-side-request-forgery"
+      ],
+      "tags": [
+        "web",
+        "injection",
+        "server-side"
+      ]
+    },
+    "idor": {
+      "name": "Insecure Direct Object Reference (BOLA)",
+      "file": "skills/idor.md",
+      "phase": "exploit",
+      "severity": "high",
+      "aliases": [
+        "idor",
+        "bola",
+        "broken-object-level-authorization",
+        "object-reference",
+        "access-control"
+      ],
+      "tags": [
+        "web",
+        "api",
+        "authorization"
+      ]
+    },
+    "auth-bypass": {
+      "name": "Authentication Bypass",
+      "file": "skills/auth-bypass.md",
+      "phase": "exploit",
+      "severity": "critical",
+      "aliases": [
+        "auth-bypass",
+        "authentication-bypass",
+        "login-bypass",
+        "authz-bypass"
+      ],
+      "tags": [
+        "auth",
+        "web",
+        "access-control"
+      ]
+    },
+    "jwt": {
+      "name": "JWT Attacks",
+      "file": "skills/jwt.md",
+      "phase": "exploit",
+      "severity": "high",
+      "aliases": [
+        "jwt",
+        "json-web-token",
+        "token-forgery",
+        "jwt-attacks"
+      ],
+      "tags": [
+        "auth",
+        "tokens",
+        "crypto"
+      ]
+    },
+    "oauth": {
+      "name": "OAuth / OIDC Attacks",
+      "file": "skills/oauth.md",
+      "phase": "exploit",
+      "severity": "high",
+      "aliases": [
+        "oauth",
+        "oauth2",
+        "oidc",
+        "sso",
+        "openid-connect"
+      ],
+      "tags": [
+        "auth",
+        "sso",
+        "oauth"
+      ]
+    },
+    "csrf": {
+      "name": "Cross-Site Request Forgery",
+      "file": "skills/csrf.md",
+      "phase": "exploit",
+      "severity": "medium",
+      "aliases": [
+        "csrf",
+        "xsrf",
+        "cross-site-request-forgery"
+      ],
+      "tags": [
+        "web",
+        "client-side",
+        "session"
+      ]
+    },
+    "lfi": {
+      "name": "Local File Inclusion / Path Traversal",
+      "file": "skills/lfi.md",
+      "phase": "exploit",
+      "severity": "critical",
+      "aliases": [
+        "lfi",
+        "rfi",
+        "path-traversal",
+        "directory-traversal",
+        "traversal"
+      ],
+      "tags": [
+        "web",
+        "injection",
+        "filesystem"
+      ]
+    },
+    "ssti": {
+      "name": "Server-Side Template Injection",
+      "file": "skills/ssti.md",
+      "phase": "exploit",
+      "severity": "critical",
+      "aliases": [
+        "ssti",
+        "template-injection",
+        "server-side-template-injection"
+      ],
+      "tags": [
+        "web",
+        "injection",
+        "template"
+      ]
+    },
+    "open-redirect": {
+      "name": "Open Redirect",
+      "file": "skills/open-redirect.md",
+      "phase": "exploit",
+      "severity": "low",
+      "aliases": [
+        "open-redirect",
+        "url-redirect",
+        "redirect"
+      ],
+      "tags": [
+        "web",
+        "client-side",
+        "phishing"
+      ]
+    },
+    "race-condition": {
+      "name": "Race Conditions / TOCTOU",
+      "file": "skills/race-condition.md",
+      "phase": "exploit",
+      "severity": "high",
+      "aliases": [
+        "race-condition",
+        "toctou",
+        "concurrency",
+        "race"
+      ],
+      "tags": [
+        "web",
+        "api",
+        "concurrency"
+      ]
+    },
+    "business-logic": {
+      "name": "Business Logic Flaws",
+      "file": "skills/business-logic.md",
+      "phase": "exploit",
+      "severity": "high",
+      "aliases": [
+        "business-logic",
+        "logic-bug",
+        "workflow-abuse",
+        "logic-flaw"
+      ],
+      "tags": [
+        "web",
+        "api",
+        "logic"
+      ]
+    },
+    "file-upload": {
+      "name": "File Upload Attacks",
+      "file": "skills/file-upload.md",
+      "phase": "exploit",
+      "severity": "critical",
+      "aliases": [
+        "file-upload",
+        "unrestricted-upload",
+        "webshell-upload",
+        "upload"
+      ],
+      "tags": [
+        "web",
+        "filesystem",
+        "rce"
+      ]
+    }
+  },
+  "aliases": {
+    "recon": "recon",
+    "reconnaissance": "recon",
+    "enum": "recon",
+    "enumeration": "recon",
+    "asset-discovery": "recon",
+    "subdomains": "subdomain-enumeration",
+    "subdomain-enum": "subdomain-enumeration",
+    "dns-enum": "subdomain-enumeration",
+    "dns-recon": "subdomain-enumeration",
+    "takeover": "subdomain-takeover",
+    "dangling-dns": "subdomain-takeover",
+    "dns-takeover": "subdomain-takeover",
+    "google-dorking": "dorking",
+    "osint": "dorking",
+    "search-dorking": "dorking",
+    "googling": "dorking",
+    "api": "api-testing",
+    "rest": "api-testing",
+    "rest-api": "api-testing",
+    "swagger": "api-testing",
+    "openapi": "api-testing",
+    "web-api": "api-testing",
+    "gql": "graphql",
+    "graphql-api": "graphql",
+    "cross-site-scripting": "xss",
+    "reflected-xss": "xss",
+    "stored-xss": "xss",
+    "dom-xss": "xss",
+    "sql-injection": "sqli",
+    "sql": "sqli",
+    "server-side-request-forgery": "ssrf",
+    "bola": "idor",
+    "broken-object-level-authorization": "idor",
+    "object-reference": "idor",
+    "access-control": "idor",
+    "authentication-bypass": "auth-bypass",
+    "login-bypass": "auth-bypass",
+    "authz-bypass": "auth-bypass",
+    "json-web-token": "jwt",
+    "token-forgery": "jwt",
+    "jwt-attacks": "jwt",
+    "oauth2": "oauth",
+    "oidc": "oauth",
+    "sso": "oauth",
+    "openid-connect": "oauth",
+    "xsrf": "csrf",
+    "cross-site-request-forgery": "csrf",
+    "rfi": "lfi",
+    "path-traversal": "lfi",
+    "directory-traversal": "lfi",
+    "traversal": "lfi",
+    "template-injection": "ssti",
+    "server-side-template-injection": "ssti",
+    "url-redirect": "open-redirect",
+    "redirect": "open-redirect",
+    "toctou": "race-condition",
+    "concurrency": "race-condition",
+    "race": "race-condition",
+    "logic-bug": "business-logic",
+    "workflow-abuse": "business-logic",
+    "logic-flaw": "business-logic",
+    "unrestricted-upload": "file-upload",
+    "webshell-upload": "file-upload",
+    "upload": "file-upload",
+    "graphql": "graphql",
+    "xss": "xss",
+    "sqli": "sqli",
+    "ssrf": "ssrf",
+    "idor": "idor",
+    "auth-bypass": "auth-bypass",
+    "jwt": "jwt",
+    "oauth": "oauth",
+    "csrf": "csrf",
+    "lfi": "lfi",
+    "ssti": "ssti",
+    "open-redirect": "open-redirect",
+    "race-condition": "race-condition",
+    "business-logic": "business-logic",
+    "file-upload": "file-upload"
+  },
+  "routes": {
+    "start": [
+      "recon",
+      "subdomain-enumeration",
+      "dorking"
+    ],
+    "new-target": [
+      "recon",
+      "subdomain-enumeration",
+      "dorking"
+    ],
+    "recon": [
+      "recon",
+      "subdomain-enumeration",
+      "dorking",
+      "subdomain-takeover"
+    ],
+    "web": [
+      "xss",
+      "sqli",
+      "ssrf",
+      "idor",
+      "csrf",
+      "open-redirect"
+    ],
+    "api": [
+      "api-testing",
+      "graphql",
+      "idor",
+      "auth-bypass",
+      "jwt",
+      "business-logic"
+    ],
+    "auth": [
+      "auth-bypass",
+      "jwt",
+      "oauth",
+      "csrf"
+    ],
+    "injection": [
+      "sqli",
+      "ssti",
+      "lfi",
+      "ssrf"
+    ],
+    "client-side": [
+      "xss",
+      "csrf",
+      "open-redirect"
+    ],
+    "server-side": [
+      "sqli",
+      "ssrf",
+      "ssti",
+      "lfi"
+    ],
+    "concurrency": [
+      "race-condition"
+    ],
+    "logic": [
+      "business-logic",
+      "idor",
+      "race-condition"
+    ],
+    "upload": [
+      "file-upload",
+      "lfi",
+      "ssti"
+    ],
+    "quick-win": [
+      "open-redirect",
+      "xss",
+      "csrf",
+      "idor"
+    ],
+    "high-impact": [
+      "sqli",
+      "ssrf",
+      "ssti",
+      "lfi",
+      "auth-bypass",
+      "file-upload"
+    ],
+    "full": [
+      "recon",
+      "subdomain-enumeration",
+      "subdomain-takeover",
+      "dorking",
+      "api-testing",
+      "graphql",
+      "xss",
+      "sqli",
+      "ssrf",
+      "idor",
+      "auth-bypass",
+      "jwt",
+      "oauth",
+      "csrf",
+      "lfi",
+      "ssti",
+      "open-redirect",
+      "race-condition",
+      "business-logic",
+      "file-upload"
+    ]
+  },
+  "agents": {
+    "orchestrator": {
+      "file": "runtime/opencode/agents/orchestrator.md",
+      "description": "The attacker. Does ALL exploitation and validation; spawns and consumes the 5 collection agents",
+      "skills": [
+        "*"
+      ]
+    },
+    "recon-agent": {
+      "file": "runtime/opencode/agents/recon-agent.md",
+      "description": "Passive subdomain/URL collection, DNS brute-force, port probes, tech fingerprint, WAF/CDN status. NO vulnerability testing",
+      "skills": [
+        "recon",
+        "subdomain-enumeration",
+        "subdomain-takeover"
+      ]
+    },
+    "dorking-agent": {
+      "file": "runtime/opencode/agents/dorking-agent.md",
+      "description": "Purely passive multi-platform OSINT dorking (Google, GitHub, Shodan, urlscan, crt.sh, Wayback, Postman). No target contact",
+      "skills": [
+        "dorking"
+      ]
+    },
+    "js-agent": {
+      "file": "runtime/opencode/agents/js-agent.md",
+      "description": "Auth-aware JS inventory: bundles, source maps, secrets, endpoints, OAuth client IDs, GraphQL/tRPC routes; preserves AUTH SESSION",
+      "skills": [
+        "api-testing"
+      ]
+    },
+    "fuzzing-agent": {
+      "file": "runtime/opencode/agents/fuzzing-agent.md",
+      "description": "WAF-gated tech-aware endpoint fuzzing with conservative rate limits; reports endpoints + params",
+      "skills": [
+        "api-testing",
+        "graphql"
+      ]
+    },
+    "understand-agent": {
+      "file": "runtime/opencode/agents/understand-agent.md",
+      "description": "Auth-first app mapping: login with owned account, capture AUTH SESSION, feature map, auth architecture. NO testing",
+      "skills": [
+        "auth-bypass",
+        "jwt",
+        "oauth",
+        "business-logic"
+      ]
+    }
+  },
+  "commands": {
+    "hunt": {
+      "file": ".opencode/commands/hunt.md",
+      "description": "Full hunt: recon -> skills -> verify -> ingest",
+      "routes": [
+        "start",
+        "web",
+        "api",
+        "quick-win"
+      ]
+    },
+    "scan": {
+      "file": ".opencode/commands/scan.md",
+      "description": "Targeted scan of one endpoint/host",
+      "routes": [
+        "web",
+        "api",
+        "injection"
+      ]
+    },
+    "recon": {
+      "file": ".opencode/commands/recon.md",
+      "description": "Recon pass on target",
+      "routes": [
+        "recon"
+      ]
+    },
+    "dorking": {
+      "file": ".opencode/commands/dorking.md",
+      "description": "OSINT/dorking pass",
+      "routes": [
+        "recon"
+      ]
+    },
+    "understand": {
+      "file": ".opencode/commands/understand.md",
+      "description": "Map app behavior and attack surface",
+      "routes": [
+        "web",
+        "api"
+      ]
+    },
+    "update": {
+      "file": ".opencode/commands/update.md",
+      "description": "Regenerate briefing, registry sync, distill lessons",
+      "routes": []
+    },
+    "report": {
+      "file": ".opencode/commands/report.md",
+      "description": "Draft and queue writeup",
+      "routes": []
+    },
+    "mindmap": {
+      "file": ".opencode/commands/mindmap.md",
+      "description": "Visualize target assets and findings",
+      "routes": []
+    }
+  }
+}

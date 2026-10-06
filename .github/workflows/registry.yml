@@ -1,0 +1,32 @@
+name: registry
+
+on:
+  push:
+    paths:
+      - "skills/**"
+      - ".agents/skills/**"
+      - "runtime/**"
+      - "scripts/**"
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install pytest
+        run: python -m pip install --quiet pytest
+      - name: Registry check
+        run: python scripts/skill_registry.py check
+      - name: Generate runtime copies
+        run: python scripts/skill_registry.py generate
+      - name: Verify no drift after generate
+        run: git diff --exit-code -- .agents/
+      - name: Skill registry tests
+        run: python -m pytest scripts/test_skill_registry.py -v
+      - name: Runtime contract tests
+        run: python -m pytest scripts/test_runtime_contract.py -v

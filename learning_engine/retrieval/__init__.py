@@ -1,0 +1,1 @@
+"""Retrieval package: FTS-backed search."""

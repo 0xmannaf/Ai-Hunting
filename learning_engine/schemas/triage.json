@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "learning_engine triage record",
+  "type": "object",
+  "required": ["finding_id", "verdict"],
+  "properties": {
+    "finding_id": {"type": "string"},
+    "verdict": {"enum": ["confirmed", "false_positive", "unverified"]},
+    "reason": {"type": ["string", "null"]},
+    "reviewer": {"type": ["string", "null"]},
+    "created_at": {"type": "string"}
+  }
+}

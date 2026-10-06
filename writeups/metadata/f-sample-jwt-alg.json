@@ -1,0 +1,14 @@
+{
+  "finding_id": "f-sample-jwt-alg",
+  "target": "test.example.com",
+  "vuln_class": "jwt",
+  "title": "JWT algorithm confusion via public key as HMAC secret",
+  "severity": "critical",
+  "confidence": 0.95,
+  "verdict": "CONFIRMED",
+  "priority": "P1",
+  "evidence": "testing/test.example.com/www/evidence/jwt-alg-confusion",
+  "signals": {"auth_bypass": true, "jwt_alg_none": false, "privilege_escalation": true},
+  "reason": "Forged HS256 token with admin claim accepted; verified against rotated key.",
+  "reviewer": "sample-corpus"
+}

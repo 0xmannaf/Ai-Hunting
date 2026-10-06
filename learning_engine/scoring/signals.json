@@ -1,0 +1,30 @@
+{
+  "weights": {
+    "rce": 0.30,
+    "auth_bypass": 0.25,
+    "sql_injection": 0.25,
+    "pii_exposure": 0.20,
+    "ssrf_metadata": 0.20,
+    "unrestricted_upload": 0.20,
+    "privilege_escalation": 0.20,
+    "default_credentials": 0.15,
+    "object_reference_guessable": 0.15,
+    "jwt_alg_none": 0.15,
+    "no_authorization_check": 0.15,
+    "reflection": 0.10,
+    "no_output_encoding": 0.10,
+    "template_math_evaluated": 0.10,
+    "file_read_confirm": 0.10,
+    "csrf_token_missing": 0.05,
+    "cors_reflects_origin": 0.05,
+    "no_rate_limit": 0.05,
+    "verbose_error": 0.02,
+    "missing_security_headers": 0.01
+  },
+  "policy": {
+    "max_signal_weight": 0.50,
+    "score_ceiling": 1.0,
+    "score_floor": 0.0
+  },
+  "description": "Bounded signal scoring weights. Scores clamp to [0, 1]. Add keys here, never ad hoc."
+}

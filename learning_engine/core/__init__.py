@@ -1,0 +1,1 @@
+"""Core package: config, schema, validation, storage."""

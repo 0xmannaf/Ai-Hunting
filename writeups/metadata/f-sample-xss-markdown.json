@@ -1,0 +1,14 @@
+{
+  "finding_id": "f-sample-xss-markdown",
+  "target": "test.example.com",
+  "vuln_class": "xss",
+  "title": "Stored XSS through markdown preview rendered in admin context",
+  "severity": "high",
+  "confidence": 0.85,
+  "verdict": "CONFIRMED",
+  "priority": "P2",
+  "evidence": "testing/test.example.com/www/evidence/stored-xss-markdown-admin",
+  "signals": {"reflection": true, "no_output_encoding": true},
+  "reason": "Stored payload executed in admin session via server-rendered preview.",
+  "reviewer": "sample-corpus"
+}

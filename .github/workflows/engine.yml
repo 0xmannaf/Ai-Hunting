@@ -1,0 +1,30 @@
+name: engine
+
+on:
+  push:
+    paths:
+      - "learning_engine/**"
+      - "memory/**"
+      - "scripts/**"
+      - "writeups/**"
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install pytest
+        run: python -m pip install --quiet pytest
+      - name: Full pytest suite (registry + runtime + engine + pipeline)
+        run: python -m pytest scripts/ -v
+      - name: Learning engine audit
+        run: python learning_engine/scripts/audit_learning_engine.py
+      - name: Preflight gate
+        run: python scripts/runtime_preflight.py --quiet
+      - name: Offline pipeline smoke run
+        run: FETCH_SAMPLE=1 python scripts/update_steps.py all --offline

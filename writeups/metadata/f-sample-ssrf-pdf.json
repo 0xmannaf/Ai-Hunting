@@ -1,0 +1,14 @@
+{
+  "finding_id": "f-sample-ssrf-pdf",
+  "target": "test.example.com",
+  "vuln_class": "ssrf",
+  "title": "SSRF via PDF generator URL parameter",
+  "severity": "high",
+  "confidence": 0.9,
+  "verdict": "CONFIRMED",
+  "priority": "P2",
+  "evidence": "testing/test.example.com/www/evidence/ssrf-pdf-export",
+  "signals": {"ssrf_metadata": true, "no_authorization_check": false, "verbose_error": false},
+  "reason": "Internal response embedded in rendered PDF; metadata reachable via redirect chain.",
+  "reviewer": "sample-corpus"
+}

@@ -1,0 +1,14 @@
+{
+  "finding_id": "f-sample-idor-export",
+  "target": "test.example.com",
+  "vuln_class": "idor",
+  "title": "IDOR on invoice export endpoint",
+  "severity": "high",
+  "confidence": 0.9,
+  "verdict": "CONFIRMED",
+  "priority": "P2",
+  "evidence": "testing/test.example.com/www/evidence/idor-invoice-export",
+  "signals": {"object_reference_guessable": true, "no_authorization_check": true},
+  "reason": "Cross-account invoice export proven with 2 owned accounts.",
+  "reviewer": "sample-corpus"
+}

@@ -1,0 +1,36 @@
+# Secrets and credentials — never commit
+.env
+.env.*
+*.pem
+*.key
+cookies*
+*tokens*
+
+# Session data and logs
+logs/
+*.log
+
+# Evidence with captured traffic
+testing/**/evidence/*
+!testing/**/evidence/.gitkeep
+testing/**/requests/*
+!testing/**/requests/.gitkeep
+testing/**/screenshots/*
+!testing/**/screenshots/.gitkeep
+
+# Local artifacts
+wordlist/cache/
+__pycache__/
+*.pyc
+.pytest_cache/
+node_modules/
+playwright-report/
+test-results/
+
+# Database with findings history (local only)
+learning_engine/memory/learning.db
+learning_engine/memory/learning.db-*
+
+# OS junk
+Thumbs.db
+.DS_Store
